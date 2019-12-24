@@ -3,9 +3,9 @@ entries:
   cpaas-appreleases:
   - apiVersion: v1
     appVersion: "2.0"
-    created: "2019-12-13T12:00:06.55041+08:00"
+    created: "2019-12-24T15:16:55.468287+08:00"
     description: Cpaas appreleases for sentry
-    digest: 81dd979b0ae33c7beae5d543998d6bad15616255a9167b7ded0cff10ad79035c
+    digest: 083f4e1f43c999c17ccb57f3ac221a823ca09f33d76e84796cb2021fd69c80a9
     name: cpaas-appreleases
     urls:
     - https://onechao.github.io/charts/cpaas-appreleases-v2.5-b.2.tgz
@@ -13,7 +13,7 @@ entries:
   nginx-ingress:
   - apiVersion: v1
     appVersion: 0.24.2
-    created: "2019-12-13T12:00:06.551104+08:00"
+    created: "2019-12-24T15:16:55.468927+08:00"
     description: An nginx Ingress controller that uses ConfigMap to store the nginx
       configuration.
     digest: b60d1726ba9242afdb57abbed89fcd37a2f309ae031d657c361d96d413c75355
@@ -35,4 +35,4 @@ entries:
     urls:
     - https://onechao.github.io/charts/nginx-ingress-1.6.17.tgz
     version: 1.6.17
-generated: "2019-12-13T12:00:06.543158+08:00"
+generated: "2019-12-24T15:16:55.466692+08:00"
