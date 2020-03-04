@@ -10,6 +10,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /$2
     "helm.sh/hook": "pre-install"
     "helm.sh/hook-weight": "1"
+    "helm.sh/hook-delete-policy": "hook-succeeded"
 spec:
   rules:
   - http:
