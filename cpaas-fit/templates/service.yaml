@@ -1,0 +1,40 @@
+kind: Service
+apiVersion: v1
+metadata:
+  annotations:
+    "helm.sh/hook": "pre-install"
+    "helm.sh/hook-weight": "2"
+  name: cpaas-fit
+  labels:
+    service_name: cpaas-fit
+{{ include "base.labels" . | indent 4 }}
+  namespace: {{ .Values.global.namespace }}
+spec:
+  clusterIP: None
+  selector:
+    service_name: cpaas-fit
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+    name: metrics
+---
+{{ if .Values.nodePort.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: cpaas-fit-nodeport
+  namespace: {{ .Values.global.namespace }}
+  labels:
+{{ include "base.labels" . | indent 4 }}
+spec:
+  type: NodePort
+  ports:
+    - port: 8080
+      targetPort: 8080
+      protocol: TCP
+      name: cpaas-fit-{{ .Values.nodePort.port }}
+      nodePort: {{ .Values.nodePort.port }}
+  selector:
+    service_name: cpaas-fit
+{{ end }}

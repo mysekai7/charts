@@ -1,0 +1,20 @@
+apiVersion: v1
+data:
+  config.yaml: |
+    authentication:
+      oidc_issuer_url: {{ .Values.authentication.oidc_issuer_url }}
+      oidc_client_id: {{ .Values.authentication.oidc_client_id }}
+    connectors:
+    - name: tsf
+      type: tsf
+      url: {{ .Values.connectors.tsf.url }}
+    - name: csp
+      type: csp
+      url: {{ .Values.connectors.csp.url }}
+kind: ConfigMap
+metadata:
+  annotations:
+    "helm.sh/hook": "pre-install"
+    "helm.sh/hook-weight": "0"
+  name: fit-configmap
+  namespace: {{ .Values.global.namespace }}

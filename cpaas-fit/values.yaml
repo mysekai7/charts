@@ -1,0 +1,28 @@
+global:
+  host: null
+  namespace: alauda-system
+  replicas: 1
+  registry:
+    address: index.alauda.cn
+  images:
+    cpaas_fit:
+      repository: alaudak8s/alauda-fit
+      tag: v2.6-b.1
+resources:
+  requests:
+    cpu: 128m
+    memory: 256Mi
+  limits:
+    cpu: "2"
+    memory: 4Gi
+nodePort:
+  enabled: false
+  port: 32006
+authentication:
+  oidc_issuer_url: https://10.0.129.100/dex
+  oidc_client_id: alauda-auth
+connectors:
+  tsf:
+    url: http://example.com
+  csp:
+    url: http://example.com

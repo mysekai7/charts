@@ -1,0 +1,23 @@
+kind: Ingress
+apiVersion: extensions/v1beta1
+metadata:
+  name: cpaas-fit
+  namespace: {{ .Values.global.namespace }}
+  labels:
+{{ include "base.labels" . | indent 4 }}
+  annotations:
+    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    "helm.sh/hook": "pre-install"
+    "helm.sh/hook-weight": "1"
+spec:
+  rules:
+  - http:
+      paths:
+        - path: /connector(/|$)(.*)
+          backend:
+            serviceName: cpaas-fit
+            servicePort: 8080
+{{- if .Values.global.host}}
+    host: {{ .Values.global.host }}
+{{- end}}
