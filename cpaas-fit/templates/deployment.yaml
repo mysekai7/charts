@@ -13,19 +13,12 @@ spec:
       service_name: cpaas-fit
   template:
     metadata:
+      annotations:
+        "helm.sh/hook": "pre-install"
+        "helm.sh/hook-weight": "1"
       labels:
         service_name: cpaas-fit
     spec:
-      affinity:
-        podAntiAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            - labelSelector:
-                matchExpressions:
-                  - key: service_name
-                    operator: In
-                    values:
-                      - cpaas-fit
-              topologyKey: kubernetes.io/hostname
       containers:
         - name: cpaas-fit
           command:
@@ -79,3 +72,78 @@ spec:
             path: config.yaml
           name: fit-configmap
         name: config
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  labels:
+    service_name: cpaas-fit
+  {{ include "base.labels" . | indent 4 }}
+  name: cpaas-fit2
+  namespace: {{ .Values.global.namespace }}
+spec:
+  replicas: {{ .Values.global.replicas }}
+  selector:
+    matchLabels:
+      service_name: cpaas-fit
+  template:
+    metadata:
+      annotations:
+        "helm.sh/hook": "pre-install"
+        "helm.sh/hook-weight": "2"
+      labels:
+        service_name: cpaas-fit
+    spec:
+      containers:
+        - name: cpaas-fit2
+          command:
+            - /fit/alauda-fit
+            - -C
+            - /etc/fit/cfg/config.yaml
+          args:
+            - "--log-level=debug"
+            - "--log-disable-color"
+            - "--log-enable-caller"
+            - "--path-prefix=/connector"
+          image: {{ .Values.global.registry.address }}/{{ .Values.global.images.cpaas_fit.repository }}:{{ .Values.global.images.cpaas_fit.tag }}
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              port: 8080
+              path: /_ping
+              scheme: HTTP
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              port: 8080
+              path: /healthz
+              scheme: HTTP
+            initialDelaySeconds: 15
+            periodSeconds: 20
+          volumeMounts:
+            - mountPath: /etc/fit/cfg
+              name: config
+          {{ if .Values.resources }}
+          resources:
+          {{ toYaml .Values.resources | indent 12 }}
+          {{ else }}
+          resources:
+            limits:
+              cpu: 500m
+              memory: 1Gi
+            requests:
+              cpu: 250m
+              memory: 256Mi
+      {{ end }}
+      imagePullSecrets:
+        - name: alaudak8s
+      volumes:
+        - configMap:
+            items:
+              - key: config.yaml
+                path: config.yaml
+            name: fit-configmap
+          name: config
