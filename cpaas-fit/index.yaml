@@ -3,11 +3,11 @@ entries:
   cpaas-fit:
   - apiVersion: v1
     appVersion: "2.0"
-    created: "2020-03-05T23:59:31.454833+08:00"
+    created: "2020-03-06T00:07:15.883669+08:00"
     description: Cpaas Fit for TSF
-    digest: 9ab4405568207be124182442b1ea0fa84a390759e403ac23a849b62f0ac49725
+    digest: 72390bf1b18106bcbfed1ff1f8cfd927a3eeb8a530b07b142f60a04bfb50a49a
     name: cpaas-fit
     urls:
     - https://onechao.github.io/charts/cpaas-fit-v2.6-b.1.tgz
     version: v2.6-b.1
-generated: "2020-03-05T23:59:31.450788+08:00"
+generated: "2020-03-06T00:07:15.88055+08:00"

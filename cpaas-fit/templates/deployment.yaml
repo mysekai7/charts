@@ -78,7 +78,7 @@ apiVersion: apps/v1
 metadata:
   labels:
     service_name: cpaas-fit2
-  {{ include "base.labels" . | indent 4 }}
+{{ include "base.labels" . | indent 4 }}
   name: cpaas-fit2
   namespace: {{ .Values.global.namespace }}
 spec:
@@ -126,10 +126,10 @@ spec:
           volumeMounts:
             - mountPath: /etc/fit/cfg
               name: config
-          {{ if .Values.resources }}
+{{ if .Values.resources }}
           resources:
-          {{ toYaml .Values.resources | indent 12 }}
-          {{ else }}
+{{ toYaml .Values.resources | indent 12 }}
+{{ else }}
           resources:
             limits:
               cpu: 500m
@@ -137,7 +137,7 @@ spec:
             requests:
               cpu: 250m
               memory: 256Mi
-      {{ end }}
+{{ end }}
       imagePullSecrets:
         - name: alaudak8s
       volumes:
