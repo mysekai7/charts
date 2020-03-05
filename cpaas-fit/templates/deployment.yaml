@@ -77,7 +77,7 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
   labels:
-    service_name: cpaas-fit
+    service_name: cpaas-fit2
   {{ include "base.labels" . | indent 4 }}
   name: cpaas-fit2
   namespace: {{ .Values.global.namespace }}
@@ -85,14 +85,14 @@ spec:
   replicas: {{ .Values.global.replicas }}
   selector:
     matchLabels:
-      service_name: cpaas-fit
+      service_name: cpaas-fit2
   template:
     metadata:
       annotations:
         "helm.sh/hook": "pre-install"
         "helm.sh/hook-weight": "2"
       labels:
-        service_name: cpaas-fit
+        service_name: cpaas-fit2
     spec:
       containers:
         - name: cpaas-fit2
