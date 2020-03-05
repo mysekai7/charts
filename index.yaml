@@ -3,7 +3,7 @@ entries:
   cpaas-appreleases:
   - apiVersion: v1
     appVersion: "2.0"
-    created: "2020-03-04T22:41:01.952326+08:00"
+    created: "2020-03-06T00:30:21.71453+08:00"
     description: Cpaas appreleases for sentry
     digest: 083f4e1f43c999c17ccb57f3ac221a823ca09f33d76e84796cb2021fd69c80a9
     name: cpaas-appreleases
@@ -13,7 +13,16 @@ entries:
   cpaas-fit:
   - apiVersion: v1
     appVersion: "2.0"
-    created: "2020-03-04T22:41:01.953768+08:00"
+    created: "2020-03-06T00:30:21.718807+08:00"
+    description: Cpaas Fit for TSF
+    digest: bda02b759a3eca98025926bf58631fd419e3c443c29ab4626ca3d262deda0a82
+    name: cpaas-fit
+    urls:
+    - https://onechao.github.io/charts/cpaas-fit-v2.6-b.2.tgz
+    version: v2.6-b.2
+  - apiVersion: v1
+    appVersion: "2.0"
+    created: "2020-03-06T00:30:21.717545+08:00"
     description: Cpaas Fit for TSF
     digest: 6d0b154be557e84d50aecced5a3d3d0054bb05194f3089c5375d68b1f255bfac
     name: cpaas-fit
@@ -23,7 +32,7 @@ entries:
   nginx-ingress:
   - apiVersion: v1
     appVersion: 0.24.2
-    created: "2020-03-04T22:41:01.9546+08:00"
+    created: "2020-03-06T00:30:21.719824+08:00"
     description: An nginx Ingress controller that uses ConfigMap to store the nginx
       configuration.
     digest: b60d1726ba9242afdb57abbed89fcd37a2f309ae031d657c361d96d413c75355
@@ -44,4 +53,4 @@ entries:
     urls:
     - https://onechao.github.io/charts/nginx-ingress-1.6.17.tgz
     version: 1.6.17
-generated: "2020-03-04T22:41:01.950461+08:00"
+generated: "2020-03-06T00:30:21.7093+08:00"
