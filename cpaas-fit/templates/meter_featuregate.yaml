@@ -1,0 +1,11 @@
+# Source: alauda-container-platform/templates/monitoring/meter_featuregate.yaml
+apiVersion: alauda.io/v1
+kind: AlaudaFeatureGate
+metadata:
+  name: meter
+  namespace: 'alauda-system'
+spec:
+  description: Meter feature gate, from acp2.6.
+  enabled: false
+  stage: Alpha
+
