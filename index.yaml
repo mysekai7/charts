@@ -3,46 +3,55 @@ entries:
   alauda-cluster-base:
   - apiVersion: v1
     appVersion: "2.0"
-    created: "2020-12-09T14:42:29.693351+08:00"
+    created: "2020-12-10T13:36:13.855835+08:00"
     description: Alauda Cluster Base Chart
     digest: a721c2bd821e6efbcbf2c37a090af1cb10b2622bbc3d6f065ba81bf0f3c2f9e8
     name: alauda-cluster-base
     urls:
-    - https://onechao.github.io/charts/alauda-cluster-base-v2.9-b.1.tgz
+    - alauda-cluster-base-v2.9-b.1.tgz
     version: v2.9-b.1
   cpaas-appreleases:
   - apiVersion: v1
     appVersion: "2.0"
-    created: "2020-12-09T14:42:29.693847+08:00"
+    created: "2020-12-10T13:36:13.856768+08:00"
     description: Cpaas appreleases for sentry
     digest: 083f4e1f43c999c17ccb57f3ac221a823ca09f33d76e84796cb2021fd69c80a9
     name: cpaas-appreleases
     urls:
-    - https://onechao.github.io/charts/cpaas-appreleases-v2.5-b.2.tgz
+    - cpaas-appreleases-v2.5-b.2.tgz
     version: v2.5-b.2
   cpaas-fit:
   - apiVersion: v1
     appVersion: "2.0"
-    created: "2020-12-09T14:42:29.695764+08:00"
+    created: "2020-12-10T13:36:13.859289+08:00"
+    description: Cpaas Fit for TSF
+    digest: e66ce82628c79449c1b6bb425b49cc28384d8cdf2b961d3b454516e5ca0b4c77
+    name: cpaas-fit
+    urls:
+    - cpaas-fit-v2.6-b.3.tgz
+    version: v2.6-b.3
+  - apiVersion: v1
+    appVersion: "2.0"
+    created: "2020-12-10T13:36:13.858847+08:00"
     description: Cpaas Fit for TSF
     digest: 02665614f5060d38de1f88fd8df0274043497f2b430fa53e927c24ee0028991e
     name: cpaas-fit
     urls:
-    - https://onechao.github.io/charts/cpaas-fit-v2.6-b.2.tgz
+    - cpaas-fit-v2.6-b.2.tgz
     version: v2.6-b.2
   - apiVersion: v1
     appVersion: "2.0"
-    created: "2020-12-09T14:42:29.695315+08:00"
+    created: "2020-12-10T13:36:13.857464+08:00"
     description: Cpaas Fit for TSF
     digest: 6d0b154be557e84d50aecced5a3d3d0054bb05194f3089c5375d68b1f255bfac
     name: cpaas-fit
     urls:
-    - https://onechao.github.io/charts/cpaas-fit-v2.6-b.1.tgz
+    - cpaas-fit-v2.6-b.1.tgz
     version: v2.6-b.1
   nginx-ingress:
   - apiVersion: v1
     appVersion: 0.24.2
-    created: "2020-12-09T14:42:29.696101+08:00"
+    created: "2020-12-10T13:36:13.85987+08:00"
     description: An nginx Ingress controller that uses ConfigMap to store the nginx
       configuration.
     digest: b60d1726ba9242afdb57abbed89fcd37a2f309ae031d657c361d96d413c75355
@@ -61,6 +70,6 @@ entries:
     sources:
     - https://github.com/kubernetes/ingress-nginx
     urls:
-    - https://onechao.github.io/charts/nginx-ingress-1.6.17.tgz
+    - nginx-ingress-1.6.17.tgz
     version: 1.6.17
-generated: "2020-12-09T14:42:29.691912+08:00"
+generated: "2020-12-10T13:36:13.850826+08:00"
