@@ -3,7 +3,7 @@ entries:
   alauda-cluster-base:
   - apiVersion: v1
     appVersion: "2.0"
-    created: "2020-12-10T13:41:27.593385+08:00"
+    created: "2020-12-10T13:49:19.649688+08:00"
     description: Alauda Cluster Base Chart
     digest: a721c2bd821e6efbcbf2c37a090af1cb10b2622bbc3d6f065ba81bf0f3c2f9e8
     name: alauda-cluster-base
@@ -13,7 +13,7 @@ entries:
   cpaas-appreleases:
   - apiVersion: v1
     appVersion: "2.0"
-    created: "2020-12-10T13:41:27.593907+08:00"
+    created: "2020-12-10T13:49:19.650462+08:00"
     description: Cpaas appreleases for sentry
     digest: 083f4e1f43c999c17ccb57f3ac221a823ca09f33d76e84796cb2021fd69c80a9
     name: cpaas-appreleases
@@ -23,7 +23,16 @@ entries:
   cpaas-fit:
   - apiVersion: v1
     appVersion: "2.0"
-    created: "2020-12-10T13:41:27.595836+08:00"
+    created: "2020-12-10T13:49:19.653231+08:00"
+    description: Cpaas Fit for TSF
+    digest: 1ac1adc8797dc761ce31828ac78976371b708a902f5a4b6a4c22b08feac32a36
+    name: cpaas-fit
+    urls:
+    - cpaas-fit-v2.6-b.4.tgz
+    version: v2.6-b.4
+  - apiVersion: v1
+    appVersion: "2.0"
+    created: "2020-12-10T13:49:19.651813+08:00"
     description: Cpaas Fit for TSF
     digest: 79c4eac7329df541c2943cf5c5ea0c5e872cf8d4829787d2b3c6203d57ec88f2
     name: cpaas-fit
@@ -32,7 +41,7 @@ entries:
     version: v2.6-b.3
   - apiVersion: v1
     appVersion: "2.0"
-    created: "2020-12-10T13:41:27.595368+08:00"
+    created: "2020-12-10T13:49:19.651319+08:00"
     description: Cpaas Fit for TSF
     digest: 02665614f5060d38de1f88fd8df0274043497f2b430fa53e927c24ee0028991e
     name: cpaas-fit
@@ -41,7 +50,7 @@ entries:
     version: v2.6-b.2
   - apiVersion: v1
     appVersion: "2.0"
-    created: "2020-12-10T13:41:27.59432+08:00"
+    created: "2020-12-10T13:49:19.65091+08:00"
     description: Cpaas Fit for TSF
     digest: 6d0b154be557e84d50aecced5a3d3d0054bb05194f3089c5375d68b1f255bfac
     name: cpaas-fit
@@ -51,7 +60,7 @@ entries:
   nginx-ingress:
   - apiVersion: v1
     appVersion: 0.24.2
-    created: "2020-12-10T13:41:27.596169+08:00"
+    created: "2020-12-10T13:49:19.653605+08:00"
     description: An nginx Ingress controller that uses ConfigMap to store the nginx
       configuration.
     digest: b60d1726ba9242afdb57abbed89fcd37a2f309ae031d657c361d96d413c75355
@@ -72,4 +81,4 @@ entries:
     urls:
     - nginx-ingress-1.6.17.tgz
     version: 1.6.17
-generated: "2020-12-10T13:41:27.592452+08:00"
+generated: "2020-12-10T13:49:19.648176+08:00"

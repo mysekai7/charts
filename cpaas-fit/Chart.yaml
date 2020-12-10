@@ -2,4 +2,4 @@ apiVersion: v1
 appVersion: "2.0"
 description: Cpaas Fit for TSF
 name: cpaas-fit
-version: v2.6-b.3
+version: v2.6-b.4

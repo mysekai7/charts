@@ -3,11 +3,11 @@ global:
   namespace: alauda-system
   replicas: 1
   registry:
-    address: index.alauda.cn
+    address: harbor-b.alauda.cn
   images:
     cpaas_fit:
-      repository: alaudak8s/alauda-fit
-      tag: v2.6-b.1
+      repository: ait/aladua-fit 
+      tag: v3.0.1
 resources:
   requests:
     cpu: 128m
