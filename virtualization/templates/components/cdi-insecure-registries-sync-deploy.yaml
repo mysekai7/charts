@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: cdi-insecure-registries-syncer
+  name: cdi-insecure-registries-syncer
+  namespace: {{.Values.global.syncer.namespace}}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cdi-insecure-registries-syncer
+  template:
+    metadata:
+      labels:
+        app: cdi-insecure-registries-syncer
+    spec:
+      containers:
+      - name: syncer
+        image: "{{.Values.global.registry.address}}/{{.Values.global.images.syncer.repository}}:{{.Values.global.images.syncer.tag}}"
+        imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            cpu: 100m
+            memory: 100Mi
+          requests:
+            cpu: 100m
+            memory: 100Mi  
+        volumeMounts:
+          - name: docker-daemon
+            mountPath: /etc/docker
+            readOnly: true
+      volumes:
+        - name: docker-daemon
+          hostPath:
+            path: /etc/docker
+            type: DirectoryOrCreate

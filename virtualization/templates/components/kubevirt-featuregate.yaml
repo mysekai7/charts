@@ -1,0 +1,8 @@
+apiVersion: alauda.io/v1
+kind: ClusterAlaudaFeatureGate
+metadata:
+  name: kubevirt
+spec:
+  description: 云原生虚拟化
+  enabled: true
+  stage: Alpha

@@ -1,0 +1,12 @@
+annotations:
+  release: beta
+apiVersion: v2
+appVersion: v0.36.0
+description: Virtualization
+maintainers:
+- email: xxhe@alauda.io
+  name: Xiaoxi He
+- email: huizhang@alauda.io
+  name: Hui Zhang
+name: virtualization
+version: v3.4.0-pr.3

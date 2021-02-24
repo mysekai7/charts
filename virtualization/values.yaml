@@ -1,0 +1,74 @@
+global:
+  registry:
+    address: harbor.alauda.cn
+  syncer:
+    namespace: cpaas-system
+  images:
+    virtoperator:
+      repository: 3rdparty/kubevirt/virt-operator
+      tag: v0.36.0
+      support_arm: false
+    virtapi:
+      repository: 3rdparty/kubevirt/virt-api
+      tag: v0.36.0
+      support_arm: false
+    virtcontroller:
+      repository: 3rdparty/kubevirt/virt-controller
+      tag: v0.36.0
+      support_arm: false
+    virthandler:
+      repository: 3rdparty/kubevirt/virt-handler
+      tag: v0.36.0
+      support_arm: false
+    virtlauncher:
+      repository: 3rdparty/kubevirt/virt-launcher
+      tag: v0.36.0
+      support_arm: false
+    cdioperator:
+      repository: 3rdparty/kubevirt/cdi-operator
+      tag: v1.28.0
+      support_arm: false
+    cdicontroller:
+      repository: 3rdparty/kubevirt/cdi-controller
+      tag: v1.28.0
+      support_arm: false
+    cdiimporter:
+      repository: 3rdparty/kubevirt/cdi-importer
+      tag: v1.28.0
+      support_arm: false
+    cdicloner:
+      repository: 3rdparty/kubevirt/cdi-cloner
+      tag: v1.28.0
+      support_arm: false
+    cdiapiserver:
+      repository: 3rdparty/kubevirt/cdi-apiserver
+      tag: v1.28.0
+      support_arm: false
+    cdiuploadserver:
+      repository: 3rdparty/kubevirt/cdi-uploadserver
+      tag: v1.28.0
+      support_arm: false
+    cdiuploadproxy:
+      repository: 3rdparty/kubevirt/cdi-uploadproxy
+      tag: v1.28.0
+      support_arm: false
+    centosdisk:
+      repository: 3rdparty/vmdisks/centos
+      tag: 7.9
+      support_arm: false
+    ubuntudisk:
+      repository: 3rdparty/vmdisks/ubuntu
+      tag: 18.04
+      support_arm: false
+    syncer:
+      repository: acp/cdi-insecure-registries-syncer
+      tag: v1.0
+      support_arm: false
+    # tomcatdisk:
+    #   repository: 3rdparty/vmdisks/centos-tomcat
+    #   tag: 7.8
+    #   support_arm: false
+kubevirt:
+  version: v0.36.0
+cdi:
+  version: v1.28.0
