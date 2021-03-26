@@ -20,5 +20,5 @@ kind: ConfigMap
 metadata:
   labels:
 {{ include "base.labels" . | indent 4 }}
-  name: sentry-test-configmap_new
+  name: sentry-test-configmap-new
   namespace: {{ .Values.global.namespace }}
