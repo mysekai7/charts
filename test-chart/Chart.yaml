@@ -2,4 +2,4 @@ apiVersion: v1
 appVersion: "2.0"
 description: test sentry chart
 name: test-chart
-version: v1.0.0
+version: v1.0.1
