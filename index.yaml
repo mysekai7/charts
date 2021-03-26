@@ -3,73 +3,73 @@ entries:
   alauda-cluster-base:
   - apiVersion: v1
     appVersion: "2.0"
-    created: "2021-03-26T13:02:03.051159+08:00"
+    created: "2021-03-26T13:22:38.120999+08:00"
     description: Alauda Cluster Base Chart
     digest: a721c2bd821e6efbcbf2c37a090af1cb10b2622bbc3d6f065ba81bf0f3c2f9e8
     name: alauda-cluster-base
     urls:
-    - https://onechao/github.io/charts/alauda-cluster-base-v2.9-b.1.tgz
+    - https://onechao.github.io/charts/alauda-cluster-base-v2.9-b.1.tgz
     version: v2.9-b.1
   cpaas-appreleases:
   - apiVersion: v1
     appVersion: "2.0"
-    created: "2021-03-26T13:02:03.051804+08:00"
+    created: "2021-03-26T13:22:38.121656+08:00"
     description: Cpaas appreleases for sentry
     digest: 083f4e1f43c999c17ccb57f3ac221a823ca09f33d76e84796cb2021fd69c80a9
     name: cpaas-appreleases
     urls:
-    - https://onechao/github.io/charts/cpaas-appreleases-v2.5-b.2.tgz
+    - https://onechao.github.io/charts/cpaas-appreleases-v2.5-b.2.tgz
     version: v2.5-b.2
   cpaas-fit:
   - apiVersion: v1
     appVersion: "2.0"
-    created: "2021-03-26T13:02:03.055547+08:00"
+    created: "2021-03-26T13:22:38.124315+08:00"
     description: Cpaas Fit for TSF
     digest: 44aede57a99b63ccce7870b4e3efffe6c84603d19d7641f2b96d948a68b250e0
     name: cpaas-fit
     urls:
-    - https://onechao/github.io/charts/cpaas-fit-v2.6-b.5.tgz
+    - https://onechao.github.io/charts/cpaas-fit-v2.6-b.5.tgz
     version: v2.6-b.5
   - apiVersion: v1
     appVersion: "2.0"
-    created: "2021-03-26T13:02:03.055056+08:00"
+    created: "2021-03-26T13:22:38.123903+08:00"
     description: Cpaas Fit for TSF
     digest: 1ac1adc8797dc761ce31828ac78976371b708a902f5a4b6a4c22b08feac32a36
     name: cpaas-fit
     urls:
-    - https://onechao/github.io/charts/cpaas-fit-v2.6-b.4.tgz
+    - https://onechao.github.io/charts/cpaas-fit-v2.6-b.4.tgz
     version: v2.6-b.4
   - apiVersion: v1
     appVersion: "2.0"
-    created: "2021-03-26T13:02:03.054531+08:00"
+    created: "2021-03-26T13:22:38.123478+08:00"
     description: Cpaas Fit for TSF
     digest: 79c4eac7329df541c2943cf5c5ea0c5e872cf8d4829787d2b3c6203d57ec88f2
     name: cpaas-fit
     urls:
-    - https://onechao/github.io/charts/cpaas-fit-v2.6-b.3.tgz
+    - https://onechao.github.io/charts/cpaas-fit-v2.6-b.3.tgz
     version: v2.6-b.3
   - apiVersion: v1
     appVersion: "2.0"
-    created: "2021-03-26T13:02:03.053843+08:00"
+    created: "2021-03-26T13:22:38.123047+08:00"
     description: Cpaas Fit for TSF
     digest: 02665614f5060d38de1f88fd8df0274043497f2b430fa53e927c24ee0028991e
     name: cpaas-fit
     urls:
-    - https://onechao/github.io/charts/cpaas-fit-v2.6-b.2.tgz
+    - https://onechao.github.io/charts/cpaas-fit-v2.6-b.2.tgz
     version: v2.6-b.2
   - apiVersion: v1
     appVersion: "2.0"
-    created: "2021-03-26T13:02:03.052541+08:00"
+    created: "2021-03-26T13:22:38.122593+08:00"
     description: Cpaas Fit for TSF
     digest: 6d0b154be557e84d50aecced5a3d3d0054bb05194f3089c5375d68b1f255bfac
     name: cpaas-fit
     urls:
-    - https://onechao/github.io/charts/cpaas-fit-v2.6-b.1.tgz
+    - https://onechao.github.io/charts/cpaas-fit-v2.6-b.1.tgz
     version: v2.6-b.1
   nginx-ingress:
   - apiVersion: v1
     appVersion: 0.24.2
-    created: "2021-03-26T13:02:03.055995+08:00"
+    created: "2021-03-26T13:22:38.124835+08:00"
     description: An nginx Ingress controller that uses ConfigMap to store the nginx
       configuration.
     digest: b60d1726ba9242afdb57abbed89fcd37a2f309ae031d657c361d96d413c75355
@@ -88,33 +88,33 @@ entries:
     sources:
     - https://github.com/kubernetes/ingress-nginx
     urls:
-    - https://onechao/github.io/charts/nginx-ingress-1.6.17.tgz
+    - https://onechao.github.io/charts/nginx-ingress-1.6.17.tgz
     version: 1.6.17
   test-chart:
   - apiVersion: v1
     appVersion: "2.0"
-    created: "2021-03-26T13:02:03.056703+08:00"
+    created: "2021-03-26T13:22:38.125613+08:00"
     description: test sentry chart
-    digest: 8328c79f5535813a4bd38d02c40986548821c2e25a0039f7d92065cc6d9bfd0e
+    digest: bb3a489a106bd4805557e2694e9857f7d2ba8d9ea45457ae0b0281f79e6b7db4
     name: test-chart
     urls:
-    - https://onechao/github.io/charts/test-chart-v1.0.1.tgz
+    - https://onechao.github.io/charts/test-chart-v1.0.1.tgz
     version: v1.0.1
   - apiVersion: v1
     appVersion: "2.0"
-    created: "2021-03-26T13:02:03.056391+08:00"
+    created: "2021-03-26T13:22:38.125282+08:00"
     description: test sentry chart
-    digest: b4c2b66dc4602759430b8dde287fecc5a93ff418835e5299cf0ec9e9874ba209
+    digest: ebdedc3e8e12034e09354a2f4a03d7187f292f83ca2c3ce45a90b24a59701f93
     name: test-chart
     urls:
-    - https://onechao/github.io/charts/test-chart-v1.0.0.tgz
+    - https://onechao.github.io/charts/test-chart-v1.0.0.tgz
     version: v1.0.0
   virtualization:
   - annotations:
       release: beta
     apiVersion: v2
     appVersion: v0.36.0
-    created: "2021-03-26T13:02:03.058101+08:00"
+    created: "2021-03-26T13:22:38.126825+08:00"
     description: Virtualization
     digest: 6271987732887d8a7a82b6c3f62f0cf9da78555c3eca515a72f354132e61a1a4
     maintainers:
@@ -124,6 +124,6 @@ entries:
       name: Hui Zhang
     name: virtualization
     urls:
-    - https://onechao/github.io/charts/virtualization-v3.4.0-pr.3.tgz
+    - https://onechao.github.io/charts/virtualization-v3.4.0-pr.3.tgz
     version: v3.4.0-pr.3
-generated: "2021-03-26T13:02:03.049828+08:00"
+generated: "2021-03-26T13:22:38.120217+08:00"
