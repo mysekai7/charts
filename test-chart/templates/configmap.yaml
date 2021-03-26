@@ -9,5 +9,16 @@ metadata:
   annotations:
     "helm.sh/hook": "pre-install"
     "helm.sh/hook-weight": "0"
+  name: sentry-test-configmap
+  namespace: {{ .Values.global.namespace }}
+---
+apiVersion: v1
+data:
+  config.yaml: |
+    a: specic ns
+kind: ConfigMap
+metadata:
+  labels:
+{{ include "base.labels" . | indent 4 }}
   name: sentry-test-configmap_new
   namespace: {{ .Values.global.namespace }}
