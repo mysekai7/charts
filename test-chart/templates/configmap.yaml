@@ -19,7 +19,7 @@ data:
 kind: ConfigMap
 metadata:
   annotations:
-    "update-mode": "put"
+    "update-mode": "patch"
   labels:
 {{ include "base.labels" . | indent 4 }}
   name: sentry-test-configmap-new
