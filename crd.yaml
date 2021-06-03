@@ -1,0 +1,124 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  annotations:
+    controller-gen.kubebuilder.io/version: v0.2.9
+  creationTimestamp: null
+  name: resourcepatches.operator.alauda.io
+spec:
+  additionalPrinterColumns:
+  - JSONPath: .status.phase
+    name: Phase
+    type: string
+  - JSONPath: .spec.release
+    name: Release
+    type: string
+  - JSONPath: .spec.target.apiVersion
+    name: Version
+    type: string
+  - JSONPath: .spec.target.kind
+    name: Kind
+    type: string
+  - JSONPath: .spec.target.namespace
+    name: Namespace
+    type: string
+  - JSONPath: .spec.target.name
+    name: Target
+    type: string
+  group: operator.alauda.io
+  names:
+    kind: ResourcePatch
+    listKind: ResourcePatchList
+    plural: resourcepatches
+    shortNames:
+    - rpch
+    singular: resourcepatch
+  scope: Cluster
+  subresources:
+    status: {}
+  validation:
+    openAPIV3Schema:
+      description: ResourcePatch is the Schema for the resourcepatches API
+      properties:
+        apiVersion:
+          description: 'APIVersion defines the versioned schema of this representation
+            of an object. Servers should convert recognized schemas to the latest
+            internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+          type: string
+        kind:
+          description: 'Kind is a string value representing the REST resource this
+            object represents. Servers may infer this from the endpoint the client
+            submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+          type: string
+        metadata:
+          type: object
+        spec:
+          description: ResourcePatchSpec defines the desired state of ResourcePatch
+          properties:
+            delete:
+              type: boolean
+            jsonPatch:
+              items:
+                description: MapValue is a wrapper for map[string]interface{}
+                type: object
+              type: array
+            release:
+              type: string
+            target:
+              description: ResourcePatchTarget defines the target of ResourcePatch
+              properties:
+                apiVersion:
+                  description: API version of the target.
+                  type: string
+                kind:
+                  description: Kind of the target.
+                  type: string
+                name:
+                  description: Name of the target.
+                  type: string
+                namespace:
+                  description: Namespace of the target.
+                  type: string
+              required:
+              - apiVersion
+              - kind
+              - name
+              type: object
+          required:
+          - release
+          - target
+          type: object
+        status:
+          description: ResourcePatchSpec defines the current state of ResourcePatch
+          properties:
+            lastApplyTime:
+              description: LastApplyTime stands for the timestamp of applying the
+                ResourcePatch
+              format: date-time
+              type: string
+            message:
+              description: Message stands for Fail message
+              type: string
+            phase:
+              description: Phase stands for the ResourcePatch's status
+              enum:
+              - Terminating
+              - Failed
+              - Active
+              - Pending
+              type: string
+          required:
+          - phase
+          type: object
+      type: object
+  version: v1alpha1
+  versions:
+  - name: v1alpha1
+    served: true
+    storage: true
+status:
+  acceptedNames:
+    kind: ""
+    plural: ""
+  conditions: []
+  storedVersions: []

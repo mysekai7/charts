@@ -18,6 +18,8 @@ data:
     a: specic ns
 kind: ConfigMap
 metadata:
+  annotations:
+    "update-mode": "put"
   labels:
 {{ include "base.labels" . | indent 4 }}
   name: sentry-test-configmap-new
